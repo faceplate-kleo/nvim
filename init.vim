@@ -21,9 +21,10 @@ set ttyfast
 let unixpath = "~/.config/nvim/plugged"
 let winpath  = "~/AppData/Local/nvim/plugged"
 
+
 let ultimatepath = winpath
-if has('unix')
-    ultimatepath = unixpath
+if has('unix') || has('linux')
+    let ultimatepath = unixpath
 endif
 
 call plug#begin(ultimatepath)
