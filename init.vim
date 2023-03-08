@@ -18,7 +18,15 @@ set clipboard=unnamedplus
 filetype plugin on
 set ttyfast
 
-call plug#begin('~/AppData/Local/nvim/plugged')
+let unixpath = "~/.config/nvim/plugged"
+let winpath  = "~/AppData/Local/nvim/plugged"
+
+let ultimatepath = winpath
+if has('unix')
+    ultimatepath = unixpath
+endif
+
+call plug#begin(ultimatepath)
 
 Plug 'ryanoasis/vim-devicons'
 Plug 'preservim/nerdtree'
@@ -42,6 +50,7 @@ set background=light
 colorscheme rose-pine
 
 lua vim.opt.runtimepath:append(',C:\\Users\\OwenD\\AppData\\Local\\nvim\\lua')
+lua vim.opt.runtimepath:append(',~/.config/nvim/lua')
 lua require('nvimcmp')
 lua require('lsp')
 lua require('lsp_lines').setup()
