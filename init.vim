@@ -45,6 +45,7 @@ Plug 'hrsh7th/cmp-cmdline'
 Plug 'hrsh7th/nvim-cmp'
 Plug 'nvim-treesitter/nvim-treesitter'
 Plug 'voldikss/vim-floaterm'
+Plug 'tpope/vim-fugitive'
 call plug#end()
 
 set background=light
