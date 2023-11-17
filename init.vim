@@ -46,10 +46,15 @@ Plug 'hrsh7th/nvim-cmp'
 Plug 'nvim-treesitter/nvim-treesitter'
 Plug 'voldikss/vim-floaterm'
 Plug 'tpope/vim-fugitive'
+Plug 'catppuccin/nvim', {'as' : 'catppucin'}
 call plug#end()
 
-set background=light
-colorscheme rose-pine
+set encoding=UTF-8
+
+lua require('colors')
+set background=dark
+colorscheme catppuccin
+set guifont=JetBrainsMono\ NF\ Medium\ 11
 
 lua vim.opt.runtimepath:append(',C:\\Users\\OwenD\\AppData\\Local\\nvim\\lua')
 lua vim.opt.runtimepath:append(',~/.config/nvim/lua')
@@ -62,6 +67,7 @@ lua require('tsitter')
 nnoremap <silent> <leader>t :FloatermNew<CR>
 nnoremap <leader>n :NERDTreeToggle<CR>
 
+let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled=1
 nmap <leader>1 <Plug>AirlineSelectTab1
 nmap <leader>2 <Plug>AirlineSelectTab2
