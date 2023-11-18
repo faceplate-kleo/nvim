@@ -27,6 +27,7 @@ if has('unix') || has('linux')
     let ultimatepath = unixpath
 endif
 
+let g:plug_shallow=0
 call plug#begin(ultimatepath)
 
 Plug 'ryanoasis/vim-devicons'
@@ -46,14 +47,17 @@ Plug 'hrsh7th/nvim-cmp'
 Plug 'nvim-treesitter/nvim-treesitter'
 Plug 'voldikss/vim-floaterm'
 Plug 'tpope/vim-fugitive'
-Plug 'catppuccin/nvim', {'as' : 'catppucin'}
+Plug 'catppuccin/nvim', {'as' : 'catppuccin'}
+Plug 'catppuccin/vim', {'as' : 'catppuccin-vim'}
 call plug#end()
 
 set encoding=UTF-8
+set termguicolors
 
 lua require('colors')
 set background=dark
 colorscheme catppuccin
+let g:airline_theme='catppuccin_mocha'
 set guifont=JetBrainsMono\ NF\ Medium\ 11
 
 lua vim.opt.runtimepath:append(',C:\\Users\\OwenD\\AppData\\Local\\nvim\\lua')
