@@ -18,6 +18,7 @@ set clipboard=unnamedplus
 filetype plugin on
 set ttyfast
 
+let mapleader = " "
 let unixpath = "~/.config/nvim/plugged"
 let winpath  = "~/AppData/Local/nvim/plugged"
 
@@ -49,6 +50,9 @@ Plug 'voldikss/vim-floaterm'
 Plug 'tpope/vim-fugitive'
 Plug 'catppuccin/nvim', {'as' : 'catppuccin'}
 Plug 'catppuccin/vim', {'as' : 'catppuccin-vim'}
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && npx --yes yarn install' }
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.5' }
 call plug#end()
 
 set encoding=UTF-8
@@ -84,4 +88,10 @@ nmap <leader>8 <Plug>AirlineSelectTab8
 nmap <leader>9 <Plug>AirlineSelectTab9
 nmap <leader>0 <Plug>AirlineSelectTab0
 nmap <leader>- <Plug>AirlineSelectPrevTab
-nmap <leader>+ <Plug>AirlineSelectNextTab
+nmap <leader>= <Plug>AirlineSelectNextTab
+
+" Find files using Telescope command-line sugar.
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+nnoremap <leader>fb <cmd>Telescope buffers<cr>
+nnoremap <leader>fh <cmd>Telescope help_tags<cr>

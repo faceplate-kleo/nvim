@@ -48,3 +48,7 @@ require('lspconfig')['rust_analyzer'].setup{
 require('lspconfig')['tsserver'].setup{}
 
 require('lspconfig')['gopls'].setup{}
+
+require('lspconfig')['hls'].setup{}
+
+require('lspconfig')['solargraph'].setup{}
