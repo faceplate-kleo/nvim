@@ -53,6 +53,7 @@ Plug 'catppuccin/vim', {'as' : 'catppuccin-vim'}
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && npx --yes yarn install' }
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.5' }
+Plug 'norcalli/nvim-colorizer.lua'
 call plug#end()
 
 set encoding=UTF-8
@@ -70,6 +71,7 @@ lua require('nvimcmp')
 lua require('lsp')
 lua require('lsp_lines').setup()
 lua require('tsitter')
+lua require('colorizer').setup()
 
 
 nnoremap <silent> <leader>t :FloatermNew<CR>
