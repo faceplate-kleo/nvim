@@ -1,4 +1,4 @@
---vim.opt.nocompatible = true
+vim.opt.compatible = false
 vim.opt.tabstop = 4
 vim.opt.title = true
 vim.opt.mouse = "v"
@@ -13,7 +13,7 @@ vim.opt.wildmode={"longest","list"}
 vim.opt.cc="80"
 vim.opt.mouse = "a"
 vim.opt.clipboard = "unnamedplus"
---vim.opt.ttyfast = true
+vim.opt.ttyfast = true
 vim.cmd([[
     syntax on
     filetype plugin on
@@ -66,7 +66,9 @@ require('colors')
 vim.opt.background = "dark"
 vim.cmd.colorscheme("catppuccin")
 vim.g.airline_theme = 'catppuccin_mocha'
-vim.g.guifont = "JetBrainsMono NF Medium 11"
+vim.opt.guifont = "JetBrainsMono NF Medium 11"
+vim.g.airline_powerline_fonts = 1
+vim.g['airline#extensions#tabline#enabled'] = 1
 
 vim.opt.runtimepath:append(',C:\\Users\\OwenD\\AppData\\Local\\nvim\\lua')
 vim.opt.runtimepath:append(',~/.config/nvim/lua')
@@ -75,6 +77,9 @@ require('lsp')
 require('lsp_lines').setup()
 require('tsitter')
 require('colorizer').setup()
+
+vim.keymap.set('n', '<leader>t', ':FloatermNew<CR>')
+vim.keymap.set('n', '<leader>n', ':NERDTreeToggle<CR>')
 
 vim.keymap.set('n', '<leader>1', '<Plug>AirlineSelectTab1')
 vim.keymap.set('n', '<leader>2', '<Plug>AirlineSelectTab3')
