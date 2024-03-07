@@ -77,3 +77,5 @@ require('lspconfig')['lua_ls'].setup{
     end
 }
 
+require('lspconfig')['terraformls'].setup{}
+
