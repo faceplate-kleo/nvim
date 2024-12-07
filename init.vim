@@ -1,11 +1,11 @@
 set nocompatible
-set tabstop=4
+set tabstop=2
 set title
 set mouse=v
 set hlsearch
-set softtabstop=4
+set softtabstop=2
 set expandtab
-set shiftwidth=4
+set shiftwidth=2
 set autoindent
 set number
 set relativenumber
@@ -54,6 +54,8 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && npx --yes yarn install' 
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.5' }
 Plug 'norcalli/nvim-colorizer.lua'
+Plug 'dart-lang/dart-vim-plugin'
+Plug 'thosakwe/vim-flutter'
 call plug#end()
 
 set encoding=UTF-8
@@ -61,8 +63,10 @@ set termguicolors
 
 lua require('colors')
 set background=dark
-colorscheme catppuccin
-let g:airline_theme='catppuccin_mocha'
+colorscheme catppuccin-macchiato
+"colorscheme catppuccin-mocha
+let g:airline_theme='minimalist'
+"let g:airline_theme='catppuccin'
 set guifont=JetBrainsMono\ NF\ Medium\ 11
 
 lua vim.opt.runtimepath:append(',C:\\Users\\OwenD\\AppData\\Local\\nvim\\lua')

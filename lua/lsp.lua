@@ -79,3 +79,4 @@ require('lspconfig')['lua_ls'].setup{
 
 require('lspconfig')['terraformls'].setup{}
 
+require('lspconfig')['dartls'].setup{}
